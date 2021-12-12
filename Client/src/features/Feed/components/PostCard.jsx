@@ -35,17 +35,17 @@ const PostCard = (props) => {
       );
       setLoadedActivities(response.data.activities);
       setLoading(false);
-      console.log('me too called once');
+      // console.log('me too called once');
     } catch (error) {}
   }, [setLoading]);
 
   useEffect(() => {
     setLoading(true);
     fetchData();
-    console.log('i called once');
+    // console.log('i called once');
   }, [fetchData]);
 
-  console.log(loadedActivities);
+  // console.log(loadedActivities);
   // const activities = loadedActivities.results;
   return (
     <>
