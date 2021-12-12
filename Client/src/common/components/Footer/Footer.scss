@@ -1,0 +1,48 @@
+@import '../../util/variables';
+
+.footer {
+  bottom: 0;
+  left: 0;
+  background: $text-color-dark;
+  padding: 10px;
+  color: $text-color-light;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 7%;
+
+    p {
+      font-weight: 400;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 20%;
+      height: 20%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .footer-icon {
+      color: $text-color-light;
+      font-size: 2.5rem;
+      margin: auto 2%;
+      cursor: pointer;
+
+      &:hover {
+        color: darken($text-color-light, 10%);
+      }
+    }
+  }
+}

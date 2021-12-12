@@ -1,0 +1,46 @@
+@import '../../../common/util/variables';
+
+.hero {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(311.76deg, #d4e7fe -15.24%, #ffffff 78.85%);
+
+  &__content {
+    margin: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+      margin-bottom: 5%;
+      &__text {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        background: lighten($color-primary, 40%);
+        border-radius: $border-radius-1;
+        color: $color-primary;
+        height: 2.5rem;
+        padding: 0.5px 15px;
+      }
+
+      &__title {
+        font-size: 3.5rem;
+      }
+
+      &__cta {
+        .cta-btn {
+          margin: 4% 3% auto 0;
+        }
+      }
+    }
+
+    &__right {
+      margin-bottom: 5%;
+      img {
+        width: 100%;
+        margin-left: 2%;
+      }
+    }
+  }
+}

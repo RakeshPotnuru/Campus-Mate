@@ -1,0 +1,24 @@
+@import '../../util/variables';
+
+.feature-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: $border-radius-2;
+  background: $text-color-light;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 10px;
+  min-height: 10rem;
+
+  &__icon {
+    img {
+      width: 80%;
+    }
+  }
+
+  @media screen and (min-width: 2800px) {
+    padding: 25px;
+    max-width: fit-content;
+    min-width: 30rem;
+  }
+}

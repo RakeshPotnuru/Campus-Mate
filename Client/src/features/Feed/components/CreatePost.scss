@@ -1,0 +1,22 @@
+@import '../../../common/util/variables';
+
+.create-post {
+  margin: 2% auto;
+  width: 50%;
+  &__input {
+    width: 100%;
+    .raf-button {
+      background-color: $color-primary;
+      font-family: $font-family-inter;
+    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: $font-family-inter;
+    h3 {
+      color: lighten(#000, 30%);
+    }
+  }
+}

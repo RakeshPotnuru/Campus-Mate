@@ -1,0 +1,116 @@
+@import '../../../common/util/variables';
+
+.about {
+  &__container {
+    margin: 7%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+      &__text {
+        color: $color-primary;
+        font-weight: 500;
+      }
+      &__list {
+        li {
+          list-style-type: none;
+          padding-left: 2rem;
+          font-weight: 600;
+          background-image: url(../../../images/radio.png);
+          background-position: 0 0;
+          background-size: 1rem 1rem;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    &__right {
+      img {
+        width: 80%;
+        margin-left: 20%;
+      }
+    }
+  }
+
+  &__container__two {
+    margin: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__card {
+      border-radius: $border-radius-2;
+      padding: 15px 40px;
+      max-width: 15rem;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      transition: 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+      &:hover {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transform: scale(1.02);
+      }
+
+      &__title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__icon {
+          color: $color-primary;
+          font-size: 1.5rem;
+        }
+
+        &__text {
+          margin-left: 10px;
+          font-weight: 600;
+        }
+      }
+
+      &__update {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__icon {
+          background: #352233;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+
+        &__text {
+          margin-left: 10px;
+          font-weight: 600;
+          color: lighten(#000, 50%);
+          span {
+            color: $color-primary;
+          }
+        }
+      }
+
+      &__button {
+        margin: 10% 0;
+        a {
+          text-decoration: none;
+          color: $text-color-dark;
+          font-weight: 600;
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    &__details {
+      width: 20rem;
+
+      &__text {
+        color: $color-primary;
+        font-weight: 500;
+      }
+    }
+  }
+}

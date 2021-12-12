@@ -1,0 +1,35 @@
+@import '../../../common/util/variables';
+
+.features {
+  background: linear-gradient(
+    0deg,
+    rgba(241, 246, 253, 0) 1.63%,
+    #f1f6fd 20.5%,
+    #f1f6fd 58.57%,
+    #ffffff 100%
+  );
+  &__container {
+    margin: 7%;
+  }
+
+  &__details {
+    text-align: center;
+    &__text {
+      color: $color-primary;
+      font-weight: 500;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 100%;
+    flex: 30%;
+    margin: 3%;
+    @media screen and (min-width: 2800px) {
+      margin: 10%;
+    }
+  }
+}

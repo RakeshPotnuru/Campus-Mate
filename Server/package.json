@@ -1,0 +1,33 @@
+{
+  "name": "campus-mate-server",
+  "version": "1.0.0",
+  "description": "campusMate server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com"
+  },
+  "keywords": [
+    "campusMate"
+  ],
+  "author": "Rakesh",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "flatted": "^3.2.4",
+    "getstream": "^7.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.0",
+    "nodemon": "^2.0.15",
+    "stream-chat": "^5.0.1",
+    "twilio": "^3.71.3",
+    "validator": "^13.7.0"
+  }
+}

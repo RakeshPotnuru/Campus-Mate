@@ -1,0 +1,47 @@
+@import '../../util/variables';
+
+.navigation {
+  padding: 10px;
+  border-bottom: 1px solid lighten($color-primary, 35%);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 3%;
+
+    &__logo {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        width: 50px;
+      }
+      h2 {
+        color: $color-primary;
+      }
+    }
+
+    &__links {
+      li:first-child {
+        &:hover {
+          color: lighten(#000, 30%);
+        }
+      }
+      li {
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: bold;
+        padding: 0 10px;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

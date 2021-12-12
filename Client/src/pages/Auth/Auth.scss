@@ -1,0 +1,89 @@
+@import '../../common//util/variables';
+
+.auth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  &__img {
+    width: 50%;
+
+    img {
+      width: 95%;
+      height: auto;
+    }
+  }
+
+  &__form {
+    width: 50%;
+
+    &__input:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &__input {
+      label {
+        font-weight: 500;
+        margin-bottom: 0.7rem;
+        display: block;
+      }
+
+      input {
+        padding: 1rem 2rem;
+        width: 80%;
+        display: block;
+        border-radius: $border-radius-1;
+        background: darken($text-color-light, 5%);
+        border: none;
+        font-family: inherit;
+
+        &:focus {
+          outline: none;
+          border: 2px solid green;
+          box-shadow: rgba(30, 255, 0, 0.2) 0px 8px 24px;
+
+          &:invalid {
+            border: 2px solid red;
+            box-shadow: rgba(255, 0, 0, 0.2) 0px 8px 24px;
+          }
+        }
+
+        &::-webkit-input-placeholder {
+          font-family: inherit;
+        }
+
+        &::placeholder {
+          color: lighten($text-color-dark, 10%);
+        }
+      }
+    }
+
+    &__bottom {
+      a {
+        color: $color-primary;
+        text-decoration: none;
+        &:hover {
+          color: darken($color-primary, 10%);
+        }
+      }
+    }
+
+    .auth-btn {
+      min-width: 15rem;
+      border-radius: $border-radius-1;
+      font-size: 1rem;
+      display: block;
+      margin: auto;
+      width: 50%;
+    }
+
+    &__title,
+    &__bottom,
+    &__social,
+    h1 {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../common/util/variables';
+
+#cta {
+  background: lighten($color-primary, 40%);
+}
+.cta {
+  margin: 7%;
+  margin-bottom: -0.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__details {
+    &__text {
+      color: $color-primary;
+      font-weight: 500;
+    }
+
+    &__button {
+      width: 20rem;
+      height: 5rem;
+      cursor: pointer;
+      background-image: url('https://freefiremobile-a.akamaihd.net/ffwebsite/images/download/googlePlay2.png');
+      background-repeat: no-repeat;
+      transition: transform ease-in 0.1s;
+      &:hover {
+        transform: scale(1.03);
+      }
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      margin-left: 10%;
+    }
+  }
+}

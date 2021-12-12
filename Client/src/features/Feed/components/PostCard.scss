@@ -1,0 +1,26 @@
+@import '../../../common/util/variables';
+
+.post-card {
+  margin: 2% auto;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  &__footer {
+    &__like {
+      margin-left: 5%;
+    }
+  }
+
+  .raf-button {
+    background: $color-primary;
+    font-family: $font-family-inter;
+  }
+}
