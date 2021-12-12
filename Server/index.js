@@ -7,7 +7,7 @@ const feedRoutes = require('./routes/feed.route');
 const connection = require('./common/connection');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 require('dotenv').config();
 

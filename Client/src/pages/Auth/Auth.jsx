@@ -43,41 +43,47 @@ const Auth = (props) => {
       avatarUrl
     } = form;
 
-    const {
-      data: { token, userId, hashedPassword, name }
-    } = await axios.post(
-      `${process.env.REACT_APP_API_URL}/auth/${
-        props.isSignup ? 'signup' : 'login'
-      }`,
-      {
-        email,
-        password,
-        confirmPassword,
-        name: form.name,
-        username,
-        phoneNumber,
-        avatarUrl
+    try {
+      const {
+        data: { token, userId, hashedPassword, name }
+      } = await axios.post(
+        `${process.env.REACT_APP_API_URL}/auth/${
+          props.isSignup ? 'signup' : 'login'
+        }`,
+        {
+          email,
+          password,
+          confirmPassword,
+          name: form.name,
+          username,
+          phoneNumber,
+          avatarUrl
+        }
+      );
+
+      cookies.set('token', token);
+      cookies.set('userId', userId);
+      cookies.set('name', name);
+      cookies.set('email', email);
+
+      if (props.isSignup) {
+        await axios.post(`${process.env.REACT_APP_API_URL}/user/addProfile`, {
+          name,
+          avatarUrl,
+          username
+        });
+        cookies.set('username', username);
+        cookies.set('password', hashedPassword);
+        cookies.set('phoneNumber', phoneNumber);
+        cookies.set('avatarUrl', avatarUrl);
       }
-    );
 
-    cookies.set('token', token);
-    cookies.set('userId', userId);
-    cookies.set('name', name);
-    cookies.set('email', email);
-
-    if (props.isSignup) {
-      await axios.post(`${process.env.REACT_APP_API_URL}/user/addProfile`, {
-        name,
-        avatarUrl,
-        username
-      });
-      cookies.set('username', username);
-      cookies.set('password', hashedPassword);
-      cookies.set('phoneNumber', phoneNumber);
-      cookies.set('avatarUrl', avatarUrl);
+      navigate('/');
+    } catch {
+      props.isSignup
+        ? alert('Some error occured')
+        : alert('Invalid credentials');
     }
-
-    navigate('/');
   };
 
   return (

@@ -52,7 +52,7 @@ const login = async (req, res) => {
 
     const { users } = await client.queryUsers({ email: email });
     if (!users.length) {
-      res.status(404).json({ message: 'User not found' });
+      return res.status(404).json({ message: 'User not found' });
     }
 
     if (req.body.email) {
@@ -62,7 +62,6 @@ const login = async (req, res) => {
     }
 
     if (!user) {
-      console.log('User not found');
       return res.status(404).json({ message: 'User not found' });
     }
 
